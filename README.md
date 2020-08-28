@@ -6,7 +6,7 @@ Call a number directly from your cordova application.
 Install the plugin using:
 
 ``` 
-npm install cordova-plugin-call-number
+npm install @globules-io/cordova-plugin-call-number
 ```
 
 Use the plugin in your JS file:
