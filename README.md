@@ -1,24 +1,23 @@
-CordovaCallNumberPlugin
+cordova-plugin-call-number
 =======================
 
 Call a number directly from your cordova application.
 
 Install the plugin using:
 
+``` 
+npm install @globules-io/cordova-plugin-call-number
+```
+
+Uninstall using:
 
 ``` 
-npm install call-number
-```
-
-or
-
-```
-yarn add call-number
+npm uninstall @globules-io/cordova-plugin-call-number
 ```
 
 Use the plugin in your JS file:
 ``` javascript
-window.plugins.CallNumber.callNumber(onSuccess, onError, number, bypassAppChooser);
+window.plugins.phone.dial(onSuccess, onError, number, bypassAppChooser);
 ```
 
 **number:** *String;* phone number to call (e.g. "1234567890")
