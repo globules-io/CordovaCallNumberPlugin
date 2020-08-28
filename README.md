@@ -6,13 +6,13 @@ Call a number directly from your cordova application.
 Install the plugin using:
 
 ``` 
-npm install @globules-io/cordova-plugin-call-number
+cordova plugin add @globules-io/cordova-plugin-call-number
 ```
 
 Uninstall using:
 
 ``` 
-npm uninstall @globules-io/cordova-plugin-call-number
+cordova plugin rm @globules-io/cordova-plugin-call-number
 ```
 
 Use the plugin in your JS file:
