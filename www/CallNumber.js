@@ -1,12 +1,18 @@
 var CallNumber = function(){};
 
 CallNumber.prototype.dial = function(success, failure, number, bypassAppChooser){
-    cordova.exec(success, failure, "CallNumber", "callNumber", [number, bypassAppChooser]);
+    //basic verification
+    if(/[0-9\- ]{6,}/.test(String(number))){
+        cordova.exec(success, failure, "CallNumber", "callNumber", [number, bypassAppChooser]);
+        return true;
+    }else{
+        return false;
+    }
 };
 
 CallNumber.prototype.isSupported = function(success, failure){
     cordova.exec(success, failure, "CallNumber", "isCallSupported");
-}
+};
 
 //Plug in to Cordova
 cordova.addConstructor(function() {
