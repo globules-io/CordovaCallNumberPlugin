@@ -9,6 +9,12 @@ Install the plugin using:
 npm install @globules-io/cordova-plugin-call-number
 ```
 
+Uninstall using:
+
+``` 
+npm uninstall @globules-io/cordova-plugin-call-number
+```
+
 Use the plugin in your JS file:
 ``` javascript
 window.plugins.phone.dial(onSuccess, onError, number, bypassAppChooser);
