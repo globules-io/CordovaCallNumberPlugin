@@ -1,6 +1,6 @@
 var CallNumber = function(){};
 
-CallNumber.prototype.dial = function(success, failure, number, bypassAppChooser){
+CallNumber.prototype.dial = function(number, bypassAppChooser, success, failure){
     //defaults
     if(typeof(success) === 'undefined'){
         success = function(){};
