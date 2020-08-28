@@ -2,13 +2,13 @@ var CallNumber = function(){};
 
 CallNumber.prototype.dial = function(number, bypassAppChooser, success, failure){
     //defaults
-    if(typeof(success) === 'undefined'){
+    if(typeof(success) !== 'function'){
         success = function(){};
     }
-    if(typeof(failure) === 'undefined'){
+    if(typeof(failure) !== 'function'){
         failure = function(){};
     }
-     if(typeof(bypassAppChooser) === 'undefined'){
+     if(typeof(bypassAppChooser) !== 'boolean'){
         bypassAppChooser = false;
     }
     //basic verification
@@ -22,10 +22,10 @@ CallNumber.prototype.dial = function(number, bypassAppChooser, success, failure)
 
 CallNumber.prototype.isSupported = function(success, failure){
     //defaults
-    if(typeof(success) === 'undefined'){
+    if(typeof(success) !== 'function'){
         success = function(){};
     }
-    if(typeof(failure) === 'undefined'){
+    if(typeof(failure) !== 'function'){
         failure = function(){};
     }
     cordova.exec(success, failure, "CallNumber", "isCallSupported");
