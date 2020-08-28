@@ -1,19 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plugin
-  xmlns="http://apache.org/cordova/ns/plugins/1.0"
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  id="call-number"
-  version="1.0.4">
-
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="@globules-io/cordova-plugin-call-number" version="1.0.4">
   <description>Call Number from Cordova Application</description>
-
   <name>Cordova Call Number Plugin</name>
-  <author>Rohith Varanasi, Nishil Shah</author>
-  
-  
-  <repo>https://github.com/Rohfosho/CordovaCallNumberPlugin.git</repo>
-  <issue>https://github.com/Rohfosho/CordovaCallNumberPlugin/issues</issue>
-
+  <author>Rohith Varanasi, Nishil Shah</author>  
+  <repo>https://github.com/globules-io/cordova-plugin-call-number.git</repo>
+  <issue>https://github.com/globules-io/cordova-plugin-call-number/issues</issue>
   <license>Apache 2.0</license>
   <keywords>cordova,call,dialer,phonegap</keywords>
   <js-module src="www/CallNumber.js" name="CallNumber">
