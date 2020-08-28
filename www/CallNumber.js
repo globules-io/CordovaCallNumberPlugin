@@ -21,6 +21,13 @@ CallNumber.prototype.dial = function(success, failure, number, bypassAppChooser)
 };
 
 CallNumber.prototype.isSupported = function(success, failure){
+    //defaults
+    if(typeof(success) === 'undefined'){
+        success = function(){};
+    }
+    if(typeof(failure) === 'undefined'){
+        failure = function(){};
+    }
     cordova.exec(success, failure, "CallNumber", "isCallSupported");
 };
 
