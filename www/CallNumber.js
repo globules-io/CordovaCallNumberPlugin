@@ -8,6 +8,9 @@ CallNumber.prototype.dial = function(success, failure, number, bypassAppChooser)
     if(typeof(failure) === 'undefined'){
         failure = function(){};
     }
+     if(typeof(bypassAppChooser) === 'undefined'){
+        bypassAppChooser = false;
+    }
     //basic verification
     if(/[0-9\- ]{6,}/.test(String(number))){
         cordova.exec(success, failure, "CallNumber", "callNumber", [number, bypassAppChooser]);
