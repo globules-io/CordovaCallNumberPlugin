@@ -17,7 +17,7 @@ npm uninstall @globules-io/cordova-plugin-call-number
 
 Use the plugin in your JS file:
 ``` javascript
-window.plugins.phone.dial(onSuccess, onError, number, bypassAppChooser);
+window.plugins.phone.dial(number, bypassAppChooser, onSuccess, onError);
 ```
 
 **number:** *String;* phone number to call (e.g. "1234567890")
