@@ -8,7 +8,7 @@ CallNumber.prototype.dial = function(number, bypassAppChooser, success, failure)
     if(typeof(failure) !== 'function'){
         failure = function(){};
     }
-     if(typeof(bypassAppChooser) !== 'boolean'){
+    if(typeof(bypassAppChooser) !== 'boolean'){
         bypassAppChooser = false;
     }
     //basic verification
@@ -32,10 +32,7 @@ CallNumber.prototype.isSupported = function(success, failure){
 };
 
 //Plug in to Cordova
-cordova.addConstructor(function() {
-    if (!window.Cordova) {
-        window.Cordova = cordova;
-    };
-    if(!window.plugins) window.plugins = {};
-    window.plugins.phone = new CallNumber();
-});
+if(!window.hasOwnProperty('plugins')){
+    window.plugins = {};
+}
+window.plugins.phone = new CallNumber();
